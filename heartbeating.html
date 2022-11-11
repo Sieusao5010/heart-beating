@@ -45,8 +45,37 @@ canvas {
 
  <BODY>
 
+  <h1 style="
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 20%;
+            position:absolute;
+            text-align: center;
+            width: 100%;
+            " class="h1Kun"> Kún heo</h1>
   <canvas id="pinkboard"></canvas>
-
+  <style>
+    .pink{
+      color: pink;
+    }
+    .aqua{
+      color:aqua
+    }
+    .white{
+      color:white
+    }
+  </style>
+<script>
+  var h1Kun = document.querySelector(".h1Kun");
+  setInterval(() => {
+    h1Kun.classList.toggle('pink')
+  }, 200);
+  // setInterval(() => {
+  //   h1Kun.classList.toggle('aqua')
+  // }, 50);
+  setInterval(() => {
+    h1Kun.classList.toggle('white')
+  }, 400);
+</script>
   <script>
 
   /*
