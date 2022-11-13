@@ -47,15 +47,23 @@ canvas {
 
   <h1 style="
             font-family:Verdana, Geneva, Tahoma, sans-serif;
-            margin-top: 20%;
+
             position:absolute;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             width: 100%;
-            " class="h1Kun"> Kún heo</h1>
+            height: 100%;
+            transition: 0.5s;
+            margin-top: -20px;
+
+            " class="h1Kun"> Kún yêu</h1>
   <canvas id="pinkboard"></canvas>
   <style>
     .pink{
       color: pink;
+      transition: 0.5s;
     }
     .aqua{
       color:aqua
@@ -63,9 +71,10 @@ canvas {
     .white{
       color:#ff9cf8;
       font-size: large;
+      transition: 0.5s;
     }
   </style>
-<script>
+<!-- <script>
   var h1Kun = document.querySelector(".h1Kun");
   setInterval(() => {
     h1Kun.classList.toggle('pink')
@@ -76,7 +85,7 @@ canvas {
   setInterval(() => {
     h1Kun.classList.toggle('white')
   }, 400);
-</script>
+</script> -->
   <script>
 
   /*
@@ -374,6 +383,16 @@ var ParticlePool = (function() {
 
 (function(canvas) {
 
+  var h1Kun = document.querySelector(".h1Kun");
+  setInterval(() => {
+    h1Kun.classList.toggle('pink')
+  }, 200);
+  // setInterval(() => {
+  //   h1Kun.classList.toggle('aqua')
+  // }, 50);
+  setInterval(() => {
+    h1Kun.classList.toggle('white')
+  }, 400);
   var context = canvas.getContext('2d'),
 
       particles = new ParticlePool(settings.particles.length),
